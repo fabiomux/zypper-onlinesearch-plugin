@@ -1,0 +1,90 @@
+.\" Manpage for zypper-onlinesearch.
+.TH man 8 "10 Feb 2023" "1.0.0" "zypper-onlinesearch man page"
+.SH NAME
+zypper-onlinesearch \- brings the online package search to the terminal
+.SH SYNOPSIS
+zypper onlinesearch <operation> [<options>]
+.SH DESCRIPTION
+zypper-onlinesearch brings the online package search, from the well known portals
+software.opensuse.org and packman.links2linux.org, to the terminal, in order to
+extend the research to all the available repositories not added yet in the system.
+.SH OPERATIONS
+.TP
+.B  -s, --search STRING
+Search for a particular STRING, this is the first step to look for a package
+to know if something similar to STRING exists or not.
+.TP
+.B  -p, --page PAGE_NAME
+Search for all the info about PAGE_NAME, previously discovered using the
+--search switch, printing a list of repositories and info about the related
+package.
+.TP
+.B  -l, --links PAGE_NAME,NTH
+Show all the links for the NTH repository listed in the PAGE_NAME page.
+.TP
+.B  --clean-cache
+Remove any cached result from the disk.
+.SH GENERAL OPTIONS
+.TP
+.B  --engine ENGINE
+Select only one of the available search engines.
+.TP
+.B  --refresh
+Switch off the local cache and download the result again.
+.TP
+.B  --timeout SECONDS
+Adjust the waiting SECONDS before to raise a timeout error.
+.SH VIEW OPTIONS
+.TP
+.B  --report
+Show the data as a report.
+.TP
+.B  --table
+Show the data as a table [DEFAULT]
+.SH PAGE AND LINKS OPTIONS
+.TP
+.B  --all-formats
+Extend the package filter to all the available formats and not only
+to those compatibles with the current architecture.
+.TP
+.B  --all-distributions
+Extend the package filter to all the available distributions and not
+only to the current one.
+.TP
+.B  --no-supported
+Hide the packages belonging to the supported repositories.
+.TP
+.B --no-experimental
+Hide the packages belonging to the experimental repositories.
+.TP
+.B  --no-community
+Hide the packages belonging to the community repositories.
+.SH LINKS OPTIONS
+.TP
+.B --format FORMAT
+Filter the packages for a specific FORMAT.
+.TP
+.B --urls
+Show only the raw urls from the links page.
+.SH EXIT STATUS
+.TP
+0
+all OK,
+.TP
+1
+general error,
+.TP
+2
+too short search string,
+.TP
+4
+invalid search engine,
+.TP
+6
+no connection.
+.SH SEE ALSO
+zypper(8)
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Fabio Mucciante <fabio.mucciante@gmail.com>

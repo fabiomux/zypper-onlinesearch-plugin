@@ -1,0 +1,6 @@
+#!/bin/bash
+export ZYPPER_ONLINESEARCH=1
+onlinesearch $@
+res=$?
+unset ZYPPER_ONLINESEARCH
+exit $res
