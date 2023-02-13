@@ -25,7 +25,7 @@ Requires:       rubygem(zypper-onlinesearch)
 Requires:       zypper >= 1.13.10
 Url:            https://github.com/fabiomux/zypper-onlinesearch-plugin
 Source:         %{mod_full_name}.tgz
-Summary:        Zypper plugin that search for packages through dedicated directory search engines
+Summary:        Zypper addon to search through the openSUSE packages search engine
 License:        GPL-3.0
 Group:          System/Packages
 
